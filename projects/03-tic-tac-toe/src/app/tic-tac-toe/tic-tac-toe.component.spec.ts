@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TicTacToeComponent } from './tic-tac-toe.component';
+import { TicTacToeService } from '../shared';
 
 describe('TicTacToeComponent', () => {
   let component: TicTacToeComponent;
@@ -8,9 +8,10 @@ describe('TicTacToeComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TicTacToeComponent ]
+      declarations: [TicTacToeComponent],
+      providers: [TicTacToeService]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
